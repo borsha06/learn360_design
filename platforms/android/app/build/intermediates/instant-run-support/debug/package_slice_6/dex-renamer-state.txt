@@ -1,0 +1,4 @@
+#Wed Jan 31 13:41:44 BDT 2018
+base.0=/home/itsd/app/platforms/android/app/build/intermediates/transforms/dexMerger/debug/44
+renamed.0=classes.dex
+file.0=/home/itsd/app/platforms/android/app/build/intermediates/transforms/dexMerger/debug/44/classes.dex
