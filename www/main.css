@@ -447,14 +447,17 @@ ons-input {
 ons-input .text-input__container {
   width: 100%;
   display: inline-block;
+ 
 }
 
 ons-input .text-input__label:not(.text-input--material__label) {
   display: none;
+ 
 }
 
 ons-input:not([float]) .text-input--material__label--active {
   display: none;
+
 }
 
 ons-input[disabled] {
@@ -464,6 +467,7 @@ ons-input[disabled] {
 
 ons-input input.text-input--material::-webkit-input-placeholder {
   color: transparent;
+
 }
 
 ons-input input.text-input--material::-moz-placeholder {

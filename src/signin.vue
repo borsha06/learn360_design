@@ -1,22 +1,25 @@
 <template>
-  <v-ons-page modifier="bg ">
+  <v-ons-page >
 
-    <v-ons-card class="cards" style="  position: relative;
+    <v-ons-card class="cards" style=" position: relative;
     top: 50%;
-    transform: translateY(-50%); ">
-    <div class="title" align="center" style="font-family: 'Helvetica Neue';
-    font-weight: 200;color:#3244cc;" >
-    Sign In 
+    transform: translateY(-50%);">
+    <div class="title" align="center">
+    <strong>
+      Sign In
+    </strong>
+
   </div>
   <br>
-  <form>
-   <div class="login_form" align="center">
-    <v-ons-icon size="20px" icon ="md-face" style="color:indigo"></v-ons-icon>
+  
+  <div class="login_form" align="center">
+   <form>
+    <v-ons-icon size="20px" icon ="md-face" style="color:#fff"></v-ons-icon>
 
     <v-ons-input float type="text"  modifier="material"
     placeholder="username" ons-model="user"></v-ons-input>
     <br><br>
-    <v-ons-icon size="20px" icon="md-lock" style="color:indigo"></v-ons-icon>
+    <v-ons-icon size="20px" icon="md-lock" style="color:#fff"></v-ons-icon>
 
     <v-ons-input float type="password"  modifier="material"
     placeholder="password" ons-model="pass" ></v-ons-input>
@@ -26,26 +29,26 @@
     font-family: cursive;
     font-style:  oblique;
     font-variant:  historical-ligatures;">
-    <p align="right" class="text" @click=""><strong>Forgot Password?</strong></p>
+    <p align="right" class="text" @click="">Forgot <strong> Password?</strong></p>
     <div class="submit" align="center">
 
 
-      <v-ons-button  ripple  style="margin: 6px 0" >Sign In
+      <v-ons-button  ripple  style="margin: 6px 0" @click="sign_in">Sign In
 
       </v-ons-button>
     </div>
 
 
- 
+  </form>
 
 
-  </div>
-</form>
+</div>
+
 
 <div class="">
 
   <div align="right" >
-    <p align="right" class="text"> <strong>Don't have an account? </strong><p align="right" class="text" @click="signup"><strong>Sign up</strong> </p></p>
+    <p align="right" class="text"> Don't have an account? <p align="right" class="text" @click="signup"><strong>Sign up</strong> </p></p>
   </div>
 
 </div>
@@ -61,50 +64,78 @@
 </v-ons-page>
 </template>
 
-<script>
+<script scoped>
   import customToolbar from './CustomToolbar';
   import signup from './signup';
+  import swal from 'sweetalert';
+  import welcome from './welcome';
   export default {
+
     data() {
      return {
       user:"",
       pass:"",
-     }
-   },
-   methods: {
+    }
+  },
+  methods: {
     signup() {
      this.pageStack.push(signup);
    },
+   sign_in(){
+ swal({
+  text: "Let's have a quick test",
+});
+ this.pageStack.push(welcome);
+
+   }
  },
  props: ['pageStack'],
  components: { customToolbar }
 }
 </script>
 <style>
-  .page--bg__background{
-    background-image:url('../www/assets/img10.jpg ' );
+  .page__background{
+    background-image:url('../www/assets/img10.jpg')!important;
   }
-  .cards{
-    z-index:99;
-  }
+ 
   .card {
-   background-color: #ffffff57;
+    padding: 20px;
+    background: rgba(255,255,255,0.15) !important;
+
  } 
- .login_form{
-  z-index: 99;
-}
-.text
-{
+
+ .text
+ {
   font-size: 15px;
-  font-family: cursive;
-  font-style:  italic;
+  font-family:'Helvetica Neue';
   font-variant:  historical-ligatures;
-  color: #0D47A1;
+  color: #fff;
 
 }
 .button
 {
-      background-color: #3244cc;
-      font-family: 'Helvetica Neue';
+  background-color: #3244cc;
+  font-family: 'Helvetica Neue';
 }
+ons-input .text-input--material{
+  color:#eae8e9 !important;
+}
+span.text-input--material__label--active
+{
+  color:#fff !important; 
+}
+.title{
+
+font-family: 'Helvetica Neue';
+    font-weight: 200;
+    color:#fff;
+}
+.swal-overlay {
+  background-color: rgba(31, 78, 105, 0.7);
+}
+.swal-text{
+text-align: center;
+}
+
+
 </style>

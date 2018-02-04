@@ -4,36 +4,38 @@
     top: 50%;
     transform: translateY(-50%); ">
     <div class="left">
-      <v-ons-back-button>Sign in</v-ons-back-button>
+      <v-ons-back-button></v-ons-back-button>
     </div>
     <div class="title" align="center" style="font-family:  'Helvetica Neue';
-    font-weight: 200;color:#3244cc;" >
-    Sign Up
+    font-weight: 200;color:#fff;" >
+    <strong>
+      Sign Up
+    </strong>
   </div>
   <br>
   <form>
    <div class="login_form" align="center">
-     <v-ons-icon size="20px" icon ="md-face" style="color:indigo"></v-ons-icon>
 
+     <v-ons-icon size="20px" icon ="md-account" style="color:#fff"></v-ons-icon>
      <v-ons-input float type="text"  modifier="material"
      placeholder="Fullname" ons-model="full"></v-ons-input>
      <br><br>
-     <v-ons-icon size="20px" icon ="md-account" style="color:indigo"></v-ons-icon>
 
+     <v-ons-icon size="20px" icon ="md-face" style="color:#fff"></v-ons-icon>
      <v-ons-input float type="text"  modifier="material"
      placeholder="Username" ons-model="user"></v-ons-input>
      <br><br>
-     <v-ons-icon size="20px" icon="md-email" style="color:indigo"></v-ons-icon>
+     <v-ons-icon size="20px" icon="md-email" style="color:#fff"></v-ons-icon>
 
      <v-ons-input float type="text"  modifier="material"
      placeholder="Email" ons-model="email"></v-ons-input>
      <br><br>
-     <v-ons-icon size="20px" icon="md-phone" style="color:indigo"></v-ons-icon>
+     <v-ons-icon size="20px" icon="md-phone" style="color:#fff"></v-ons-icon>
 
      <v-ons-input float type="text"  modifier="material"
      placeholder="Mobile" ons-model="mobile"></v-ons-input>
      <br><br>
-     <v-ons-icon size="20px" icon="md-lock" style="color:indigo"></v-ons-icon>
+     <v-ons-icon size="20px" icon="md-lock" style="color:#fff"></v-ons-icon>
 
      <v-ons-input float type="password"  modifier="material"
      placeholder="Password" ons-model="pass"></v-ons-input>
@@ -82,25 +84,35 @@
     components: { customToolbar }
   }
 </script>
-<style>
-  .page--bg__background{
-    background-image:url('../www/assets/img10.jpg ' );
+<style scoped>
+  .page__background{
+    background-image:url('../www/assets/img10.jpg ' ) !important;
   }
   .card{
-    padding: 37px;
-    background-color: #ffffff57;
+    padding: 20px;
+    background: rgba(255,255,255,0.1) !important;
+    border-radius: 8px !important; 
   }
 
-  .button
-  {
+  .button{
     background-color: #3244cc;
     font-family: 'Helvetica Neue';
   }
-  .back-button
-  { color: #3752cc;
+  
+  .left{
+    width: 1%;
+
+
   }
 
-.back-button__icon {
-fill: #3752cc;
-}
+  ons-back-button .back-button__icon.back-button--material__icon{
+    fill: #ffffff !important;
+  }
+  ons-input .text-input--material{
+    color:#eae8e9 !important;
+  }
+  span.text-input--material__label--active{
+    color:#fff !important; 
+    text-decoration: none !important;
+  }
 </style>
