@@ -1,5 +1,6 @@
 <template>
-  <v-ons-page modifier="bg ">
+  <v-ons-page>
+  <div class="signup">
     <v-ons-card class="cards" style="  position: relative;
     top: 50%;
     transform: translateY(-50%); ">
@@ -44,20 +45,11 @@
 
      </v-ons-button>
    </div>
-
-
- </div>
-</form>
-
-</div>
-
-
-</div>
-</v-ons-col>
-</v-ons-row>
+ </form>
 
 </form>
 </v-ons-card>
+</div>
 </v-ons-page>
 </template>
 
@@ -85,9 +77,13 @@
   }
 </script>
 <style scoped>
-  .page__background{
-    background-image:url('../www/assets/img10.jpg ' ) !important;
+.signup{
+    background-image:url('./assets/img10.jpg')!important;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
+
   .card{
     padding: 20px;
     background: rgba(255,255,255,0.1) !important;
@@ -98,7 +94,7 @@
     background-color: #3244cc;
     font-family: 'Helvetica Neue';
   }
-  
+
   .left{
     width: 1%;
 
