@@ -84,13 +84,26 @@
 </script>
 <style scoped>
   .signin{
-    background-image:url('./assets/img10.jpg')!important;
+    animation: pulse 10s infinite;
     position: absolute;
     width: 100%;
     height: 100%;
   }
+  @keyframes pulse {
+  0% {
+    background-image: url('./assets/img1.jpg'); 
+  }
+  50%
+  {
+    background-image: url('./assets/img2.jpg'); 
+  }
+  100% {
+   background-image: url('./assets/img3.jpg'); 
+  }
+}
 
   .card {
+    border: 1px solid #fff;
     padding: 20px;
     background: rgba(255,255,255,0.15) !important;
 
@@ -123,7 +136,7 @@
     color:#fff;
   }
   .swal-overlay {
-    background-color: rgba(31, 78, 105, 0.7);
+    background-color: rgba(31, 78, 105, 0.23);
   }
   .swal-text{
     text-align: center;

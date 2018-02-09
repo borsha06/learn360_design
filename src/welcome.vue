@@ -9,7 +9,6 @@
 				</div>
 			</div>
     -->
-<br>
     <div class="top" align="center">
      <strong>Hey There,</strong> 
     </div>
@@ -21,7 +20,7 @@
     <div class="section" @click="exams">
     <v-ons-row class="user_cover">
       <v-ons-col>
-        <div class="user_thumbnail" style="background-color: #dd6218"><ons-icon icon="fa-clock-o"></ons-icon></div>
+        <div class="user_thumbnail" style="background-color: #9C27B0"><ons-icon icon="fa-clock-o"></ons-icon></div>
         <div class="timer" id="user_2_name"><strong>2 Minutes</strong></div>
       </v-ons-col>
       <v-ons-col >

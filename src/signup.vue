@@ -78,7 +78,7 @@
 </script>
 <style scoped>
 .signup{
-    background-image:url('./assets/img10.jpg')!important;
+    background-image:url('./assets/img1.jpg')!important;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -86,7 +86,8 @@
 
   .card{
     padding: 20px;
-    background: rgba(255,255,255,0.1) !important;
+    border: 1px solid #fff;
+    background: rgba(255,255,255,0.2) !important;
     border-radius: 8px !important; 
   }
 

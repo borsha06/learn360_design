@@ -2,10 +2,10 @@
 	<v-ons-page>
 		<div class="cong_bg">
 			<div class="remove">
-				<v-ons-card style="background-color: #D64541;">
+				<v-ons-card style="background-color: #e91e63;">
 				<p><strong> Fill Up the Form for Better Experience </strong></p>
 				</v-ons-card>
-				<v-ons-card style="background-color:#F64747;">
+				<v-ons-card style="background-color:rgba(233, 30, 99, 0.1);">
 
 					<form>
 						<div class="login_form" align="center">
@@ -25,7 +25,7 @@
 							<br><br>
 							<v-ons-button class="got_it_button"ripple modifier="large" style="margin: 6px 0" @click="dash">Got It</v-ons-button>
 
-						</v-ons-button>
+						
 					</div>
 				</form>
 			</v-ons-card>
@@ -60,7 +60,7 @@
 </script>
 <style>
 	.cong_bg{
-		background-color: #c0392b;
+		background-color: #e91e63;
 		position: absolute;
 
 		width: 100%;
@@ -83,11 +83,14 @@
 	
 
 	ons-input .text-input--material{
-		color:#eae8e9 !important;
+		color:#fff !important;
 	}
 	span.text-input--material__label--active
 	{
 		color:#fff !important; 
+	}
+	.text-input--material__label{
+		color: #fff !important;
 	}
 	.got_it_button{
 		background-color: #D24D57 !important;

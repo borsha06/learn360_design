@@ -3,7 +3,7 @@
 		<div class="test_body" >
 			<v-ons-card style="text-align:center; background-color:#e74c3c;  position: relative;
 			top: 50%;
-			transform: translateY(-50%); ">
+			transform: translateY(-50%); border-radius: 8px !important;  ">
 			
 			<div class="timer">
 				<div class="minutes" v-text="minutes"></div>
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 
-			<div v-show="ques_index === questions.length" >
+			<div v-show="ques_index === questions.length" v-on="s">
 				
 				<h2>
 					Quiz finished
@@ -119,11 +119,13 @@
 		},
 		methods:{
 			congratz(){
+
 				 swal({
       text: "Congratulation on Your First Exam!",
     });
 				this.pageStack.push(congratz)
 			},
+
 			next: function() {
 				this.ques_index++;
 			},
